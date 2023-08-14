@@ -7,6 +7,15 @@ body{
 .step1{
     background: #e2e1e0 !important;
 }
+step2{
+    background: #e2e1e0 !important;
+    button{
+        background: #fff !important; 
+    }
+    card {
+        background: #fff !important; 
+    }
+}
 .center{
     height: 100vh;
      display: flex;
@@ -50,7 +59,7 @@ body{
     border: none;
     border-radius: 9px;
 }
-
+.material-icons {vertical-align: middle;} 
 .sbutton {
     background-image: linear-gradient(90deg, rgba(47,40,169,0.9949229691876751) 0%, rgba(93,54,224,1) 35%, rgba(136,29,197,1) 100%);
     margin-top: 4px;
@@ -103,11 +112,19 @@ body{
     color: #5774e7;
 }
 
-.welcome-msg{
-    background: #eae7ff;
-    width: 70%;
-    box-shadow: 0 1px 2px 0 #0000000d;
+.play{
+    background-image: linear-gradient(90deg, rgba(47,40,169,0.9949229691876751) 0%, rgba(93,54,224,1) 35%, rgba(136,29,197,1) 100%);
+    margin-top: 4px;
+    margin-bottom: 4px;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15);
+    color: white;
+    margin: 3px;
+    padding-right: 9px;
+    border: none;
+    border-radius: 6px;
 }
+
+
 
 .document-card{
     background-color: #dec1d1;
@@ -131,54 +148,8 @@ body{
     align-items: center;
     justify-content: center;
 }
-.clock-loader {
-    --clock-color: #b6779a;
-    --clock-width: 2.5rem;
-    --clock-radius: calc(var(--clock-width) / 2);
-    --clock-minute-length: calc(var(--clock-width) * 0.4);
-    --clock-hour-length: calc(var(--clock-width) * 0.2);
-    --clock-thickness: 0.2rem;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: var(--clock-width);
-    height: var(--clock-width);
-    border: 3px solid var(--clock-color);
-    border-radius: 50%;
-    top: 189px;
-    left: -7px;
 
-    &::before,
-    &::after {
-        position: absolute;
-        content: "";
-        top: calc(var(--clock-radius) * 0.25);
-        width: var(--clock-thickness);
-        background: var(--clock-color);
-        border-radius: 10px;
-        transform-origin: center calc(100% - calc(var(--clock-thickness) / 2));
-        animation: spin infinite linear;
-    }
 
-    &::before {
-        height: var(--clock-minute-length);
-        animation-duration: 2s;
-    }
-
-    &::after {
-        top: calc(var(--clock-radius) * 0.25 + var(--clock-hour-length));
-        height: var(--clock-hour-length);
-        animation-duration: 15s;
-    }
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(1turn);
-    }
-}
-  
 
 .ig{
     font-size: 36px;
@@ -217,10 +188,8 @@ body{
     }
 }
 
-.card-memo-list{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.cards{
+ margin: 0 auto;
 }
 
 .card {

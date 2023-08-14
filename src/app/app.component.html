@@ -1,4 +1,4 @@
-<div class="center step1" *ngIf="step == 0">
+<div class="center step1" *ngIf="step == 2">
     <div class="container-fluid">
         <div class="row">
             <div class="start">
@@ -42,32 +42,28 @@
 </div>
 
 
-<div class="routs_icons" *ngIf="step == 2">
-    <div class="left">
-        <button (click)="showCardView = false" mat-raised-button><i class="material-icons">home</i><span class="px-2">Home</span></button>      
+<div class="step2"  *ngIf="step == 0">
+    <div class="container-fluid">
+    <div class="row">
+        <div class="header routs_icons">
+            <div class="left">
+                <button (click)="showCardView = false" mat-raised-button><i class="material-icons">home</i><span class="px-2">Home</span></button>      
+            </div>
+            <div class="right">
+                <span class="px-1">
+                    <button mat-raised-button><i class="material-icons">share</i><span class="px-1">Share</span></button>
+                    <button  class="play"><i class="material-icons">play_arrow</i><span class="px-1">Present</span></button>
+                    <button mat-raised-button><i class="material-icons">chat_bubble_outline</i><span class="px-1">0</span></button>
+                </span>
+                <span class="px-1"><i class="material-icons ig">account_circle</i></span>
+            </div>
+        </div>
     </div>
-    <div class="right">
-        <span class="px-1">
-            <button mat-raised-button><i class="material-icons">share</i><span class="px-1">Share</span></button>
-            <button mat-raised-button><i class="material-icons">play_arrow</i><span class="px-1">Present</span></button>
-            <button mat-raised-button><i class="material-icons">chat_bubble_outline</i><span class="px-1">0</span></button>
-        </span>
-        <span class="px-1"><i class="material-icons ig">account_circle</i></span>
+    <div class="row">
+        <div class="col cards">
+            <app-dynamic-card></app-dynamic-card>
+        </div>
     </div>
-    <div *ngIf="showCardView" class="card-memo-list">
-        <mat-card class="card card-1" *ngFor="let card of dataSource">
-            <mat-card-header class="justify-content-between align-items-center">
-               <mat-card-title>{{card.title}}</mat-card-title>
-              <!-- <div>
-                <label (click)="card.collapsed=true">+</label>
-                <label (click)="card.collapsed=false">-</label>
-              </div> -->
-            </mat-card-header>
-          
-            <mat-card-content *ngIf="!card.collapsed">
-              <p>{{card.discriptions}}</p>
-            </mat-card-content>
-          </mat-card>
     </div>
 </div>
 

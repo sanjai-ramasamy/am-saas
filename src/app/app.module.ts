@@ -9,10 +9,12 @@ import {MatButtonModule} from '@angular/material/button';
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { MaterialModule } from './material.module';
-
+import { FormsModule } from '@angular/forms';
+import { DynamicCardComponent } from './dynmaic-card.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DynamicCardComponent
   ],
   imports: [
     BrowserModule,
@@ -21,8 +23,8 @@ import { MaterialModule } from './material.module';
     MatButtonModule,
     BrowserAnimationsModule,
     MaterialModule,
-    CommonModule
-
+    CommonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
