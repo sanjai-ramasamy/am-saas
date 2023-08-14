@@ -1,0 +1,74 @@
+<div class="center step1" *ngIf="step == 0">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="start">
+                <div class="tc">A new medium for presenting ideas</div>
+            </div>
+            <div class="center-1">
+                <button class="button-c sbutton" (click)="step=1">Get Started</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="step == 1">
+    <mat-progress-bar class="example-margin" [color]="color" *ngIf="isLoading" [value]="value"></mat-progress-bar>
+    <div class="center">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="h-100">
+                    <div class="row j-l mx-5 msg">Hi &#9995; ,I'm your AI design partner. What would you like to create today?</div>  
+                    <div class="row center-1" style="margin-top: 25px;">
+                        <div class="row doc-bg">
+                            <mat-card class="document-card">
+                                <div class="card-content">
+                                    <img src="./assets/image/proposal-bg.svg" alt="">
+                                </div>
+                                <div>
+                                    <input  hidden  type="file"  #file (change)="onSelect($event)"/>
+                                    <button (click)="onUpload()" class="button-c sbutton mt-3 px-2">
+                                        <i class="material-icons" *ngIf="!isLoading">add</i>
+                                        <span class="p-2">Document</span>
+                                    </button>
+                                </div>
+                            </mat-card>
+                        </div>
+                    </div>
+                </div>
+           
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="routs_icons" *ngIf="step == 2">
+    <div class="left">
+        <button (click)="showCardView = false" mat-raised-button><i class="material-icons">home</i><span class="px-2">Home</span></button>      
+    </div>
+    <div class="right">
+        <span class="px-1">
+            <button mat-raised-button><i class="material-icons">share</i><span class="px-1">Share</span></button>
+            <button mat-raised-button><i class="material-icons">play_arrow</i><span class="px-1">Present</span></button>
+            <button mat-raised-button><i class="material-icons">chat_bubble_outline</i><span class="px-1">0</span></button>
+        </span>
+        <span class="px-1"><i class="material-icons ig">account_circle</i></span>
+    </div>
+    <div *ngIf="showCardView" class="card-memo-list">
+        <mat-card class="card card-1" *ngFor="let card of dataSource">
+            <mat-card-header class="justify-content-between align-items-center">
+               <mat-card-title>{{card.title}}</mat-card-title>
+              <!-- <div>
+                <label (click)="card.collapsed=true">+</label>
+                <label (click)="card.collapsed=false">-</label>
+              </div> -->
+            </mat-card-header>
+          
+            <mat-card-content *ngIf="!card.collapsed">
+              <p>{{card.discriptions}}</p>
+            </mat-card-content>
+          </mat-card>
+    </div>
+</div>
+
+
