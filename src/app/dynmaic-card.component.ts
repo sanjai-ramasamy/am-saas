@@ -67,70 +67,70 @@ export class DynamicCardComponent {
     {
       id: 1,
       title: "Investment Highlights",
-      content: "American Casino & Entertainment Properties LLC\n\n1. Investment Highlights:\n- Strategically located, diversified portfolio of casino assets in the most stable gaming regulatory jurisdiction in the world, in one of the fastest growing gaming markets in the US.\n- Well-regarded, experienced management team, with a demonstrated track record for turning around neglected assets.\n- Emphasis on slot play, in conjunction with relatively low maintenance capital expenditures, produces strong, predictable free cash flow.\n\n",
+      content: "BarWash Limited\n\n1. Investment Highlights:\nBarWash Limited is a UK registered limited company that aims to commercialize an innovative format for the bars, pubs, and clubs industry. The company offers a unique value proposition by combining a full-service laundrette and a fully-licensed bar in a single, city-center location. Directed primarily at young people, BarWash aims to provide convenience and fun by offering laundry services, a bar, coffee shop, catering, and internet access. The company has a first-mover advantage in a new segment within a mature market and has the potential for further expansion.\n\n",
       isEditing:false,
        isExpanded: true
     },
     {
       id: 2,
       title: "USP",
-      content: "What sets this company apart from its competitors is its innovative approach to solving a specific problem in the health industry. By leveraging cutting-edge technology and data analytics, the company offers a personalized and data-driven solution that significantly improves patient outcomes. This unique selling proposition positions the company as a leader in the market, with a clear advantage over traditional healthcare providers.",
+      content: "\nBarWash stands out from the competition by offering a comprehensive range of products and services within a single complex. The combination of laundry facilities, a bar, coffee shop, catering, and internet access creates a unique and convenient experience for customers. The company's value proposition is based on the principles of convenience and fun, making the chore of doing laundry as painless as possible.\n\n",
       isEditing:false,
       isExpanded: true
     },
     {
       id: 3,
       title: "Product/Service",
-      content: "The company's product is a digital health platform that caters to a wide range of target groups, including patients, healthcare providers, and insurance companies. The platform offers comprehensive health monitoring, personalized treatment plans, and real-time data analysis. By addressing the pain points of inefficient healthcare delivery, lack of patient engagement, and fragmented data, the company aims to revolutionize the way healthcare is delivered and experienced.",
+      content: "\nBarWash offers state-of-the-art laundry facilities for washing and drying clothes, along with additional value-added services such as ironing, folding, dry cleaning drop-off, and collection. The company also operates a fully-licensed bar, a coffee shop, and catering services. Customers can also enjoy wireless internet access while using the facilities.\n\n",
       isEditing:false,
       isExpanded: true
     },
     {
       id: 4,
       title: "Team",
-      content: "The founding team consists of highly accomplished individuals with extensive experience in the healthcare and technology sectors. The CEO, a former healthcare executive, brings deep industry knowledge and a track record of successful product launches. The CTO, a seasoned technologist, has a strong background in developing scalable platforms. Together, the team possesses the necessary expertise to drive the company's growth and navigate the complexities of the healthcare industry.",
+      content: "\nThe management team of BarWash consists of experienced directors with a background in the bars, pubs, and clubs industry. The team has close links with the local and national press, which will be leveraged for promotional campaigns.\n\n",
       isEditing:false,
       isExpanded: true
     },
     {
       id: 5,
       title: "Business Model",
-      content: "The company generates revenue through a subscription-based model, offering tiered pricing plans for different user segments. Additionally, strategic partnerships with healthcare providers and insurance companies provide additional revenue streams. The scalable nature of the platform allows for rapid customer acquisition and expansion into new markets.",
+      content: ":\nBarWash generates revenue through the sale of laundry services, food and beverages, and merchandising. The company offers competitive pricing for its products and services, with mark-ups on consumables ranging from 30% to 70%. The business model is designed to target the niche student, key worker, and young professional markets.\n\n",
       isEditing:false,
       isExpanded: true
     },
     {
       id: 6,
       title: "Marketing & Distribution",
-      content: "To reach its target customers, the company employs a multi-channel marketing strategy, including digital advertising, partnerships with healthcare providers, and direct sales efforts. The platform's user-friendly interface and personalized approach ensure high customer engagement and retention. The company also plans to leverage data-driven marketing techniques to optimize customer acquisition and conversion rates.",
+      content: "\nBarWash plans to reach its target customers through focused promotional campaigns, including advertising in student newspapers and magazines, flyers and posters, radio spots, and sponsoring student sports teams. The company will also target student accommodation in the proposed catchment area. Public relations and ongoing promotional strategies will be implemented to generate awareness and attract customers.\n\n",
       isEditing:false,
       isExpanded: true
     },
     {
       id: 7,
       title: "Market & Competition",
-      content: "The market for digital health solutions is experiencing rapid growth, with a projected CAGR of 20% over the next five years. The total addressable market is estimated to be in the billions, driven by increasing healthcare costs and the need for more efficient and patient-centric solutions. While there are existing competitors in the market, the company's unique value proposition and superior technology position it for significant market share capture.",
+      content: "\nThe market opportunity for BarWash is significant, with a large potential customer base of young people, particularly students and young professionals. The company's unique concept and value proposition differentiate it from competitors. However, low barriers to entry and the potential for government regulations in the marketing of alcoholic drinks pose risks and threats.\n\n",
       isEditing:false,
       isExpanded: true
     },
     {
       id: 8,
       title: "Finances",
-      content: "The company's financial plan demonstrates a clear path to profitability. With a current revenue of $X million, the company projects a 3x increase in revenue over the next three years. Key performance indicators, such as customer acquisition cost and customer lifetime value, are favorable and indicate strong financial health.",
+      content: "\nThe market opportunity for BarWash is significant, with a large potential customer base of young people, particularly students and young professionals. The company's unique concept and value proposition differentiate it from competitors. However, low barriers to entry and the potential for government regulations in the marketing of alcoholic drinks pose risks and threats.\n\n",
       isEditing:false,
       isExpanded: true
     },
     {
       id: 9,
       title: "Financing Needs and Use of Capital",
-      content: "The company is seeking to raise $X million in this funding round to support its expansion plans. The capital will be primarily allocated towards product development, sales and marketing efforts, and talent acquisition. A portion of the funds will also be reserved for potential strategic partnerships and market expansion.",
+      content: "\nBarWash is seeking capital investment to fund its start-up and strategic implementation. The company aims to use the capital to establish its brand, secure suitable properties, and expand its operations.\n\n",
      isEditing:false,
      isExpanded: true
     },
     {
       id: 10,
       title: "Investment Hypothesis",
-      content: "This health startup presents a compelling investment opportunity due to its unique product offering, experienced team, scalable business model, and significant market potential. The company's innovative approach to healthcare delivery positions it for rapid growth and disruption in the industry. With a clear path to profitability and a strong market position, this investment has the potential to generate substantial returns for investors.",
+      content: "\nBarWash presents a compelling investment opportunity due to its unique value proposition, experienced management team, and significant market potential. The company's innovative concept and potential for further expansion make it an attractive investment option.\n\nPlease note that this investment memo contains certain analyses, statements, estimates, and forward-looking projections that reflect management's views and involve various risks and uncertainties. Investors should carefully consider the information provided and conduct their own due diligence before making any investment decisions",
       isEditing:false,
       isExpanded: true
     }
