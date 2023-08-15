@@ -1,4 +1,4 @@
-<div class="center step1" *ngIf="step == 2">
+<div class="center step1" *ngIf="step == 0">
     <div class="container-fluid">
         <div class="row">
             <div class="start">
@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<div *ngIf="step == 0">
+<div *ngIf="step == 1">
     <mat-progress-bar class="example-margin" [color]="color" *ngIf="isLoading" [value]="value"></mat-progress-bar>
     <div class="center">
         <div class="container-fluid">
@@ -19,51 +19,46 @@
                 <div class="h-100">
                     <div class="row j-l mx-5 msg">&#9995; Hi Anil ,I'm your Deal Sourcing AI partner. What would you like to create today?</div>  
                     <div class="row center-1" style="margin-top: 25px;">
-                        <div class="row">
-                            <div class="col-md-4 doc-bg">
-                                <mat-card class="document-card">
-                                    <div class="card-content">
-                                        <div class="image-1"></div>
-                                    </div>
-                                    <div>
-                                        <input  hidden  type="file"  #file (change)="onSelect($event)"/>
-                                        <button (click)="onUpload()" class="button-c sbutton mt-3 px-2">
-                                            <i class="material-icons" *ngIf="!isLoading">add</i>
-                                            <span class="p-2">Screen Memo</span>
-                                        </button>
-                                    </div>
-                                </mat-card>
-                            </div>
-                            <div class="col-md-4 doc-bg">
-                                <mat-card class="document-card">
-                                    <div class="card-content">
-                                        <img src="./assets/image/proposal-bg.svg" alt="">
-                                    </div>
-                                    <div>
-                                        <input  hidden  type="file"  #file (change)="onSelect($event)"/>
-                                        <button (click)="onUpload()" class="button-c sbutton mt-3 px-2">
-                                            <i class="material-icons" *ngIf="!isLoading">add</i>
-                                            <span class="p-2">Marketing Campain</span>
-                                        </button>
-                                    </div>
-                                </mat-card>
-                            </div>
-                            <div class="col-md-4 doc-bg">
-                                <mat-card class="document-card">
-                                    <div class="card-content">
-                                        <img src="./assets/image/proposal-bg.svg" alt="">
-                                    </div>
-                                    <div>
-                                        <input  hidden  type="file"  #file (change)="onSelect($event)"/>
-                                        <button (click)="onUpload()" class="button-c sbutton mt-3 px-2">
-                                            <i class="material-icons" *ngIf="!isLoading">add</i>
-                                            <span class="p-2">Trip Planning</span>
-                                        </button>
-                                    </div>
-                                </mat-card>
-                            </div>
+                        <div class="upload-content doc-bg">
+                            <mat-card class="document-card">
+                                <div class="card-content">
+                                    <img src="./assets/image/slide-bg.svg" alt="">
+                                </div>
+                                <div>
+                                    <input  hidden  type="file"  #file (change)="onSelect($event)"/>
+                                    <button (click)="onUpload()" class="button-c sbutton mt-3 px-2">
+                                        <i class="material-icons" *ngIf="!isLoading">add</i>
+                                        <span class="p-2">Screen Memo</span>
+                                    </button>
+                                </div>
+                            </mat-card>
+                        
+                            <mat-card class="document-card">
+                                <div class="card-content">
+                                    <img src="./assets/image/proposal-bg.svg" alt="">
+                                </div>
+                                <div>
+                                    <input  hidden  type="file"  #file (change)="onSelect($event)"/>
+                                    <button (click)="onUpload()" class="button-c sbutton mt-3 px-2">
+                                        <span class="p-2">Marketing Campain</span>
+                                    </button>
+                                </div>
+                            </mat-card>
+                        
+                            <mat-card class="document-card">
+                                <div class="card-content">
+                                    <img src="./assets/image/landing-bg.svg" alt="">
+                                </div>
+                                <div>
+                                    <input  hidden  type="file"  #file (change)="onSelect($event)"/>
+                                    <button (click)="onUpload()" class="button-c sbutton mt-3 px-2">
+                                        <span class="p-2">Trip Planning</span>
+                                    </button>
+                                </div>
+                            </mat-card>
                         </div>
                     </div>
+                    <div class="row j-l mx-auto mt-5 msg">Sounds good! Upload a CIM document and i will generate a draft screening memo for your review</div>  
                 </div>
            
             </div>
@@ -77,13 +72,13 @@
     <div class="row">
         <div class="header routs_icons">
             <div class="left">
-                <button (click)="showCardView = false" mat-raised-button class="w-2"><i class="material-icons">home</i><span class="px-2">Home</span></button>      
+                <button (click)="step=0" mat-raised-button class="w-2"><i class="material-icons">home</i><span class="px-2">Home</span></button>      
             </div>
             <div class="right">
                 <span class="px-1">
-                    <!-- <button mat-raised-button class="w-2"><a href="https://www.flaticon.com/de/kostenlose-icons/chat-blasen" title="chat-blasen Icons"></a><span class="px-1">AI</span></button> -->
+                    <button  class="play" (click)="snav.toggle()"><span class="px-1">AI Agent</span></button> 
                     <button mat-raised-button class="w-2"><i class="material-icons">share</i><span class="px-1">Share</span></button>
-                    <button  class="play"><i class="material-icons">play_arrow</i><span class="px-1">Present</span></button>
+                    <button mat-raised-button class="w-2"><i class="material-icons">play_arrow</i><span class="px-1">Present</span></button>
                     <button mat-raised-button class="w-2"><i class="material-icons">chat_bubble_outline</i><span class="px-1">0</span></button>
                 </span>
                 <span class="px-1"><i class="material-icons ig">account_circle</i></span>
@@ -91,14 +86,42 @@
         </div>
     </div>
     <div class="row">
-        <mat-sidenav-container class="example-container">
-            <mat-sidenav-content>
-                <div class="col cards">
-                    <app-dynamic-card></app-dynamic-card>
+        <mat-drawer-container class="example-container">
+            <mat-drawer-content>
+                <div class="col cards" style="margin:0 auto;">
+                    <app-dynamic-card  (sendDataToParent)="eventFromChild($event)"></app-dynamic-card>
                 </div>
-            </mat-sidenav-content>
-            <mat-sidenav mode="side"></mat-sidenav>
-          </mat-sidenav-container>
+            </mat-drawer-content>
+            <mat-drawer #snav mode="over" [position]="'end'">
+               <div class="cp-bg">
+                    <div class="row header">
+                        <div class="col-10 title">Xero! </div>
+                        <div class="col close" (click)="snav.toggle()"><i class="material-icons">close</i></div>
+                    </div>
+                    <div class="mt-3">
+                    <div class="row msg">
+                        &#9995; Hi Anil ,I'm your Deal Sourcing AI partner.<br> Welome back!!
+
+                    </div>  
+                    <div class="small-header">Here are some ways I can help:</div>
+                    <div class="tile" (click)="changeContent()">Make this more concise</div>
+                    <div class="tile">Expand on this</div>
+                    <div class="tile">Put the key points into boxes</div>
+                    <div class="tile">Add some emojis</div>
+                    <form>
+                        <div class="col-lg-10 m-3">
+                          <div class="input-group mycustom">
+                            <input type="text" class="form-control rounded-0" id="validationDefaultUsername" placeholder="Ask" aria-describedby="inputGroupPrepend2" required>
+                            <div class="input-group-prepend">
+                                <button  class="play nts"><i class="material-icons">send</i></button>
+                            </div>
+                          </div>
+                        </div>
+                    </form>
+                </div>
+               </div>
+            </mat-drawer>
+          </mat-drawer-container>
     </div>
     </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { interval } from 'rxjs';
+import { DynamicCardComponent } from './dynmaic-card.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,20 @@ export class AppComponent {
   curSec:number =0;
   @ViewChild("file") file : any | ElementRef;
   isLoading: boolean = false;
+  @ViewChild('snav') snav: any;
+  @ViewChild(DynamicCardComponent)
+ private dynamicCardComponent: DynamicCardComponent;
+   i:any = 0;
 
+   dataFromChild:any;
+  eventFromChild(data:any) {
+    this.dataFromChild = data;
+    this.snav.toggle();
+    console.log(data)
+  }
+ changeContent() {
+    this.dynamicCardComponent.change(this.dataFromChild);
+  }
   onUpload(){
     const e: HTMLElement = this.file.nativeElement;
     e.click();

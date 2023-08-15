@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
     selector: 'app-dynamic-card',
     template: `
-      <div *ngFor="let card of cards; let i = index" class="card card-1">
+        <div class="cp">
+      <div *ngFor="let card of cards; let i = index" class="card card-1" (click)="select(i)">
       <div class="card-content">
-             <div class="card-ti"> {{ card.title }}  </div>
-             <div class="card-content"> {{ card.content }}  </div>
+             <div class="a-l card-ti"> {{ card.title }}  </div>
+             <div class="a-l card-content"> {{ card.content }}  </div>
         </div>
+      </div>
       </div>
     `,
     styles: [
@@ -22,11 +24,50 @@ import { Component } from '@angular/core';
     ],
   })
 export class DynamicCardComponent {
+    @Input() dataFromParent: String;
+    @Output() sendDataToParent = new EventEmitter<string>();
+    select(i:any){
+        this.sendDataToParent.emit(i);
+    }
+    dummy: any = [
+        {
+          id: 1,
+          title: "Investment Highlights",
+          content: "",
+          isEditing:false,
+           isExpanded: true
+        },
+        {
+          id: 2,
+          title: "USP",
+          content: "What sets this company apart from its competitors is its innovative approach to solving a specific problem in the health industry. By leveraging cutting-edge technology and data analytics, the company offers a personalized and data-driven solution that significantly improves patient outcomes. This unique selling proposition positions the company as a leader in the market, with a clear advantage over traditional healthcare providers.",
+          isEditing:false,
+          isExpanded: true
+        },
+        {
+          id: 3,
+          title: "Product/Service",
+          content: "The company's product is a digital health platform that caters to a wide range of target groups, including patients, healthcare providers, and insurance companies. The platform offers comprehensive health monitoring, personalized treatment plans, and real-time data analysis. By addressing the pain points of inefficient healthcare delivery, lack of patient engagement, and fragmented data, the company aims to revolutionize the way healthcare is delivered and experienced.",
+          isEditing:false,
+          isExpanded: true
+        },
+        {
+            id: 4,
+            title: "Team",
+            content: "The founding team consists of highly accomplished individuals with extensive experience in the healthcare and technology sectors. The CEO, a former healthcare executive, brings deep industry knowledge and a track record of successful product launches. The CTO, a seasoned technologist, has a strong background in developing scalable platforms. Together, the team possesses the necessary expertise to drive the company's growth and navigate the complexities of the healthcare industry.",
+            isEditing:false,
+            isExpanded: true
+        }
+    ]
+    change(id:any){
+        this.cards[id].content = this.dummy[id].content;
+    }
+
   cards: any = [
     {
       id: 1,
       title: "Investment Highlights",
-      content: "This investment opportunity presents a compelling case in the health startup sector. The company has developed a unique product that addresses a significant pain point in the market. With a strong and experienced founding team, a scalable business model, and a large addressable market, this startup has the potential for substantial growth and profitability.",
+      content: "American Casino & Entertainment Properties LLC\n\n1. Investment Highlights:\n- Strategically located, diversified portfolio of casino assets in the most stable gaming regulatory jurisdiction in the world, in one of the fastest growing gaming markets in the US.\n- Well-regarded, experienced management team, with a demonstrated track record for turning around neglected assets.\n- Emphasis on slot play, in conjunction with relatively low maintenance capital expenditures, produces strong, predictable free cash flow.\n\n",
       isEditing:false,
        isExpanded: true
     },

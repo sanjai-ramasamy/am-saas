@@ -37,6 +37,11 @@ body{
     margin-top: 15px;
 }
 
+.a-l{
+    text-align: left;
+}
+
+
 .start{
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(79deg, #2b0aff, #6e75d4 49%, #ff5b8a 55%, #bb5ade 77%, #764c2b);
@@ -67,11 +72,16 @@ body{
     border-radius: 9px;
 }
 .material-icons {vertical-align: middle;} 
+.doc-bg{
+    margin-top: 35px;
+}
+
 .sbutton {
     background-image: linear-gradient(90deg, rgba(47,40,169,0.9949229691876751) 0%, rgba(93,54,224,1) 35%, rgba(136,29,197,1) 100%);
     margin-top: 4px;
     margin-bottom: 4px;
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15);
+    font-size: 16px;
 }
 
 .f-s{
@@ -203,6 +213,12 @@ body{
  margin: 0 auto;
 }
 
+.cp{
+    :hover{
+      background: #f0e1ff17;
+    }
+}
+
 .card {
     width: 65%;
     background: #fff;
@@ -251,5 +267,84 @@ body{
     letter-spacing: -0.36px;
     word-wrap: break-word;
     word-break: break-word;
-    color:rgb(39, 37, 37)
+    color:rgb(77 77 77)
   }
+  .cp-bg{
+    background:#ffffff !important;
+    border-top-left-radius: 10px;
+    height: 100%;
+    width:400px;
+    .close{
+        margin:11px;
+        cursor: pointer;
+    }
+    .title{
+        padding: 13px 23px;
+        font-size: 24px;
+    }
+    .msg{
+        border-radius: 6px;
+        font-size: 17px;
+        width: fit-content;
+        word-break: break-all;
+    }
+    .small-header{
+        color: #777;
+        padding: 0px 15px;
+        margin: 15px 0px;
+    }
+    .tile{
+        color: #6e75d4;
+        font-size: 17px;
+        background:#ffffffb3 !important;
+        border: 1px solid #e5e0df;
+        margin: 10px;
+        padding: 2px 10px;
+        border-radius: 7px;
+    }
+    .nts{
+        padding: 6px;
+        margin: -4px;
+        border-radius: 1px 1px;
+    }
+  }
+
+
+  .mycustom {
+    border: 1px solid #e5e0df;
+     border-radius: 7px;
+    position: relative;
+    }
+    .mycustom input[type=text] {
+        border: none;
+        width: 100%;
+        padding-right: 123px;
+    }
+    .mycustom .input-group-prepend {
+        position: absolute;
+        right: 4px;
+        top: 4px;
+        bottom: 4px;z-index:9;
+    }
+
+    .upload-content{
+        display: flex;
+        width: max-content;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .document-card{
+        background-color: #dec1d1 !important;
+        width: 250px;;
+        height: max-content;
+        padding: 10px;
+        border-radius: 10px !important;
+        margin: 10px;
+        .card-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+    }
