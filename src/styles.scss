@@ -7,10 +7,17 @@ body{
 .step1{
     background: #e2e1e0 !important;
 }
-step2{
+.step2{
     background: #e2e1e0 !important;
-    button{
+    .right{
+       .w-2{
         background: #fff !important; 
+       }
+    }
+    .left{
+        .w-2{
+            background: #fff !important; 
+           }  
     }
     card {
         background: #fff !important; 
@@ -90,7 +97,6 @@ step2{
 }
 
 .doc-bg{
-    width: min-content;
     margin-top: 35px;
     background: #c7b0b04f;
     padding: 18px;
@@ -124,11 +130,16 @@ step2{
     border-radius: 6px;
 }
 
+.image-1{
+    background-image:  url(./assets/image/proposal-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 
 .document-card{
     background-color: #dec1d1;
-    width: 250px;
+    width: inherit;
     height: max-content;
     padding: 10px;
     border-radius: 10px;
@@ -153,7 +164,7 @@ step2{
 
 .ig{
     font-size: 36px;
-    color: #a19a88a6;
+    color: #000000a6;
 }
 
 .routs_icons{
@@ -197,7 +208,8 @@ step2{
     background: #fff;
     border-radius: 2px;
     display: inline-block;
-    height: 400px;
+    min-height: 200px;
+    height: max-content;
     margin: 1rem;
     position: relative;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -223,4 +235,21 @@ step2{
   .card-1 {
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+
+  .card-ti{
+    font-size: 45px !important;
+    font-weight: 550;
+    padding: 0px 9px;
+  }
+
+  .card-content{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding:5px 10px;
+    font-size: 18px;
+    letter-spacing: -0.36px;
+    word-wrap: break-word;
+    word-break: break-word;
+    color:rgb(39, 37, 37)
   }

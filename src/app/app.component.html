@@ -11,27 +11,57 @@
     </div>
 </div>
 
-<div *ngIf="step == 1">
+<div *ngIf="step == 0">
     <mat-progress-bar class="example-margin" [color]="color" *ngIf="isLoading" [value]="value"></mat-progress-bar>
     <div class="center">
         <div class="container-fluid">
             <div class="row">
                 <div class="h-100">
-                    <div class="row j-l mx-5 msg">Hi &#9995; ,I'm your AI design partner. What would you like to create today?</div>  
+                    <div class="row j-l mx-5 msg">&#9995; Hi Anil ,I'm your Deal Sourcing AI partner. What would you like to create today?</div>  
                     <div class="row center-1" style="margin-top: 25px;">
-                        <div class="row doc-bg">
-                            <mat-card class="document-card">
-                                <div class="card-content">
-                                    <img src="./assets/image/proposal-bg.svg" alt="">
-                                </div>
-                                <div>
-                                    <input  hidden  type="file"  #file (change)="onSelect($event)"/>
-                                    <button (click)="onUpload()" class="button-c sbutton mt-3 px-2">
-                                        <i class="material-icons" *ngIf="!isLoading">add</i>
-                                        <span class="p-2">Document</span>
-                                    </button>
-                                </div>
-                            </mat-card>
+                        <div class="row">
+                            <div class="col-md-4 doc-bg">
+                                <mat-card class="document-card">
+                                    <div class="card-content">
+                                        <div class="image-1"></div>
+                                    </div>
+                                    <div>
+                                        <input  hidden  type="file"  #file (change)="onSelect($event)"/>
+                                        <button (click)="onUpload()" class="button-c sbutton mt-3 px-2">
+                                            <i class="material-icons" *ngIf="!isLoading">add</i>
+                                            <span class="p-2">Screen Memo</span>
+                                        </button>
+                                    </div>
+                                </mat-card>
+                            </div>
+                            <div class="col-md-4 doc-bg">
+                                <mat-card class="document-card">
+                                    <div class="card-content">
+                                        <img src="./assets/image/proposal-bg.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <input  hidden  type="file"  #file (change)="onSelect($event)"/>
+                                        <button (click)="onUpload()" class="button-c sbutton mt-3 px-2">
+                                            <i class="material-icons" *ngIf="!isLoading">add</i>
+                                            <span class="p-2">Marketing Campain</span>
+                                        </button>
+                                    </div>
+                                </mat-card>
+                            </div>
+                            <div class="col-md-4 doc-bg">
+                                <mat-card class="document-card">
+                                    <div class="card-content">
+                                        <img src="./assets/image/proposal-bg.svg" alt="">
+                                    </div>
+                                    <div>
+                                        <input  hidden  type="file"  #file (change)="onSelect($event)"/>
+                                        <button (click)="onUpload()" class="button-c sbutton mt-3 px-2">
+                                            <i class="material-icons" *ngIf="!isLoading">add</i>
+                                            <span class="p-2">Trip Planning</span>
+                                        </button>
+                                    </div>
+                                </mat-card>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -42,27 +72,33 @@
 </div>
 
 
-<div class="step2"  *ngIf="step == 0">
+<div class="step2"  *ngIf="step == 2">
     <div class="container-fluid">
     <div class="row">
         <div class="header routs_icons">
             <div class="left">
-                <button (click)="showCardView = false" mat-raised-button><i class="material-icons">home</i><span class="px-2">Home</span></button>      
+                <button (click)="showCardView = false" mat-raised-button class="w-2"><i class="material-icons">home</i><span class="px-2">Home</span></button>      
             </div>
             <div class="right">
                 <span class="px-1">
-                    <button mat-raised-button><i class="material-icons">share</i><span class="px-1">Share</span></button>
+                    <!-- <button mat-raised-button class="w-2"><a href="https://www.flaticon.com/de/kostenlose-icons/chat-blasen" title="chat-blasen Icons"></a><span class="px-1">AI</span></button> -->
+                    <button mat-raised-button class="w-2"><i class="material-icons">share</i><span class="px-1">Share</span></button>
                     <button  class="play"><i class="material-icons">play_arrow</i><span class="px-1">Present</span></button>
-                    <button mat-raised-button><i class="material-icons">chat_bubble_outline</i><span class="px-1">0</span></button>
+                    <button mat-raised-button class="w-2"><i class="material-icons">chat_bubble_outline</i><span class="px-1">0</span></button>
                 </span>
                 <span class="px-1"><i class="material-icons ig">account_circle</i></span>
             </div>
         </div>
     </div>
     <div class="row">
-        <div class="col cards">
-            <app-dynamic-card></app-dynamic-card>
-        </div>
+        <mat-sidenav-container class="example-container">
+            <mat-sidenav-content>
+                <div class="col cards">
+                    <app-dynamic-card></app-dynamic-card>
+                </div>
+            </mat-sidenav-content>
+            <mat-sidenav mode="side"></mat-sidenav>
+          </mat-sidenav-container>
     </div>
     </div>
 </div>

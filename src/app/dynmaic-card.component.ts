@@ -3,20 +3,10 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-dynamic-card',
     template: `
-      <div *ngFor="let card of cards; let i = index" class="card">
-        <div (click)="toggleEdit(card)">
-          <div *ngIf="!card.isEditing; else editTemplate">
-            <div class="card-content">
-              {{ card.title }}
-              {{ card.content }}
-            </div>
-          </div>
-          <ng-template #editTemplate>
-            <div class="card-content">
-            <input type="text" [(ngModel)]="card.title" (blur)="saveEdit(card)">
-            <input type="text" [(ngModel)]="card.content" (blur)="saveEdit(card)">
-            </div>
-          </ng-template>
+      <div *ngFor="let card of cards; let i = index" class="card card-1">
+      <div class="card-content">
+             <div class="card-ti"> {{ card.title }}  </div>
+             <div class="card-content"> {{ card.content }}  </div>
         </div>
       </div>
     `,
@@ -49,7 +39,7 @@ export class DynamicCardComponent {
     },
     {
       id: 3,
-      title: "Product / Service",
+      title: "Product/Service",
       content: "The company's product is a digital health platform that caters to a wide range of target groups, including patients, healthcare providers, and insurance companies. The platform offers comprehensive health monitoring, personalized treatment plans, and real-time data analysis. By addressing the pain points of inefficient healthcare delivery, lack of patient engagement, and fragmented data, the company aims to revolutionize the way healthcare is delivered and experienced.",
       isEditing:false,
       isExpanded: true
